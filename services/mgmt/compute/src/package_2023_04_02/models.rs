@@ -15411,7 +15411,7 @@ pub struct VirtualMachineScaleSetVm {
         deserialize_with = "azure_core::util::deserialize_null_as_default",
         skip_serializing_if = "Vec::is_empty"
     )]
-    pub zones: Vec<String>,
+    pub zones: Vec<Option<String>>,
     #[doc = "Identity for the virtual machine."]
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub identity: Option<VirtualMachineIdentity>,
